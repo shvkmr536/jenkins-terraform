@@ -17,12 +17,12 @@ pipeline {
 }
   stage('Terraform Plan'){
     steps{
-      sh '${TERRAFORM_HOME}/terraform plan -out tfplan"
+      sh "${TERRAFORM_HOME}/terraform plan -out tfplan"
     }
   }
   stage('Terraform Apply'){
     steps{
-      sh '${TERRAFORM_HOME}/terraform apply -refresh=false tfplan"
+      sh "${TERRAFORM_HOME}/terraform apply -refresh=false tfplan"
     }
   }
    stage('Terraform destroy'){
