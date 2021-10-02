@@ -1,7 +1,9 @@
 pipeline {
-  agen any
+  agent any
   environment {
     TERRAFORM_HOME = tool 'myTerraform'
+    EXAMPLE_KEY = credentials('aws-ecr') // Secret value is 'sec%ret'
+  }
   }
   stages{
     stage('Check Terraform path & Version'){
@@ -30,7 +32,7 @@ pipeline {
         sh "${TERRAFORM_HOME}/terraform destroy -auto-approve"
       }
     }
-    Post{ success{echo('Run when successful')}
+    post{ success{echo('Run when successful')}
          failure{echo('Run when failed')}
         }
   }
