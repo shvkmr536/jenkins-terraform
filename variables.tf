@@ -16,3 +16,7 @@ variable "key_name" {
 variable "cluster_name" {
   default = "web_cluster"
 }
+
+variable "aws_region" {
+  default = "us-east-1"
+}
