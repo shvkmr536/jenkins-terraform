@@ -10,7 +10,7 @@ variable "cluster_name" {
 */
 
 variable "key_name" {
-  default = "swarm_key"
+  default = "ec2_key"
 }
 
 variable "cluster_name" {
