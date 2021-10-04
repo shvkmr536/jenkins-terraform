@@ -26,15 +26,15 @@ attribute {
 }
 }
 
-/*terraform {
-  backend "s3"{
-    #bucket details
-    bucket = "ecsworkshopbucket536"
-    region = "us-east-1"
-    key = "myapp/prod/terraform.tfstate"
-    # DynamoDB table name
-    dynamodb_table = "terraform-test-locks"
-    encrypt = true
-  }
-}
-*/
+#/*terraform {
+#  backend "s3"{
+#    #bucket details
+#    bucket = "ecsworkshopbucket536"
+#    region = "us-east-1"
+#   key = "myapp/prod/terraform.tfstate"
+#    # DynamoDB table name
+#    dynamodb_table = "terraform-test-locks"
+#    encrypt = true
+#  }
+#}
+#*/
